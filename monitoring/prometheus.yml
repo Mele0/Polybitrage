@@ -1,0 +1,17 @@
+# Prometheus scrape config for the arb bot.
+# 5s scrape interval gives good resolution for latency peaks while staying light.
+# The bot's /metrics snapshot for latency refreshes every --profile-dump-seconds
+# (set that to ~5 to match); live vitals (cash/positions/opportunities) are
+# always fresh per scrape.
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: arb-bot
+    metrics_path: /metrics
+    static_configs:
+      # Bot runs on the host. Start it with --health-host 0.0.0.0 so this is reachable.
+      - targets: ['host.docker.internal:8765']
+        labels:
+          instance: 'poly-arb'

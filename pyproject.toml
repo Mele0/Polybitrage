@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polybitrage"
+version = "0.1.0"
+description = "Polybitrage: a high-frequency arbitrage scanner and guarded executor for Polymarket and Kalshi prediction markets."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Alex Melendez Ramos" },
+  { name = "Joel Jurado Diaz" },
+]
+dependencies = [
+  "httpx>=0.27.0",
+  "PyYAML>=6.0.1",
+  "rich>=13.7.0",
+  "websockets>=12.0",
+  "sortedcontainers>=2.4.0",
+  # Windows has no system IANA tz database; ZoneInfo("America/New_York") needs this.
+  "tzdata>=2024.1 ; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+live = ["py-clob-client-v2>=1.0.0"]
+audit = ["duckdb>=1.0.0", "pyarrow>=16.0.0", "pandas>=2.0.0"]
+speed = [
+  "uvloop>=0.19.0",
+  "orjson>=3.9.0",
+  "httpx[http2]>=0.27.0",
+  "sortedcontainers>=2.4.0",
+  "numba>=0.59.0",
+  "numpy>=1.26.0",
+]
+
+[project.scripts]
+polybitrage = "src.main:main"
+poly-arb = "src.main:main"
+polymarket-arb = "src.main:main"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

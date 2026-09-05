@@ -1,0 +1,35 @@
+[package]
+name = "polymarket_rs"
+version = "0.1.0"
+edition = "2021"
+description = "Zero-copy Rust WebSocket client for Polymarket CLOB market data"
+
+[lib]
+name = "polymarket_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+# Python bindings
+pyo3 = { version = ">=0.21, <1", features = ["extension-module"] }
+
+# Async runtime + WebSocket
+tokio          = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+tokio-tungstenite = { version = ">=0.20, <1", features = ["native-tls"] }
+
+# JSON — no_std-compatible, zero-copy via borrowed &str deserialization
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Concurrent book state — lock-free reads, fast writes
+dashmap      = ">=5, <7"
+parking_lot  = "0.12"
+ordered-float = ">=3, <5"
+
+# Stream/sink traits for tokio-tungstenite
+futures-util = "0.3"
+
+[profile.release]
+opt-level     = 3
+lto           = "thin"   # thin LTO: fast build, near-full optimization
+codegen-units = 1
+panic         = "abort"  # smaller binary, faster panics

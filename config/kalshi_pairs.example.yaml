@@ -1,0 +1,24 @@
+notes: Example Kalshi pair file for paper/audit scans. Replace tickers with real Kalshi market tickers.
+pairs:
+  - name: KALSHI_EXAMPLE_PAIR
+    enabled: true
+    parent_market_ticker: KXEXAMPLE-26JAN01-T50
+    child_market_ticker: KXEXAMPLE-26JAN01-B50
+    parent_outcome_label: Above 50
+    child_outcome_label: Below 50
+    relation: child_implies_parent
+    relation_subtype: kalshi_manual
+    relation_safety: clean
+    boundary_ambiguity: false
+    trade_template:
+      leg_1:
+        market: parent
+        outcome: YES
+        side: BUY
+      leg_2:
+        market: child
+        outcome: NO
+        side: BUY
+    overrides:
+      estimated_fee_rate: 0.0
+      slippage_buffer: 0.0

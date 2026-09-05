@@ -1,0 +1,55 @@
+# Prometheus + Grafana for the Polymarket arb bot.
+#
+# The bot runs on the HOST (not in a container) and serves Prometheus metrics at
+# http://<health-host>:<health-port>/metrics  (default 127.0.0.1:8765).
+# Prometheus (in this compose) scrapes it via host.docker.internal.
+#
+#   cd monitoring && docker compose up -d
+#   Grafana:    http://localhost:3000   (anonymous admin, dashboard auto-loaded)
+#   Prometheus: http://localhost:9090
+#
+# IMPORTANT: so Prometheus (in Docker) can reach the bot on the host, run the bot
+# with --health-host 0.0.0.0 (it binds localhost-only by default):
+#   ... paper-arb-sim --headless --profile --health-host 0.0.0.0 --health-port 8765
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: arb-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=15d
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      # Lets `host.docker.internal` resolve to the host on Linux (no-op on macOS,
+      # where Docker Desktop provides it natively).
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: arb-grafana
+    depends_on:
+      - prometheus
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      # Anonymous access so you can open the dashboard with zero login friction.
+      # Remove these three lines if you expose Grafana beyond localhost.
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_USERS_DEFAULT_THEME=dark
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  prometheus-data:
+  grafana-data:

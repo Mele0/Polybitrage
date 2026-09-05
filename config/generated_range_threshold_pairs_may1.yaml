@@ -1,0 +1,2296 @@
+pairs:
+- name: AUTO_BTC_68_000_vs_70_000_72_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-70000-72000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-70000-72000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 70,000-72,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [70000, 72000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_70_000_72_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-70000-72000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-70000-72000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 70,000-72,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [70000, 72000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_72_000_74_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 72,000-74,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [72000, 74000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_72_000_74_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 72,000-74,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [72000, 74000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_72_000_74_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-72000-74000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 72,000-74,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [72000, 74000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_74_000_76_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 74,000-76,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [74000, 76000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_74_000_76_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 74,000-76,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [74000, 76000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_74_000_76_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 74,000-76,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [74000, 76000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_74_000_76_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-74000-76000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 74,000-76,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [74000, 76000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_76_000_78_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 76,000-78,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [76000, 78000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_76_000_78_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 76,000-78,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [76000, 78000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_76_000_78_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 76,000-78,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [76000, 78000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_76_000_78_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 76,000-78,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [76000, 78000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_76_000_78_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-76000-78000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 76,000-78,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [76000, 78000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_78_000_vs_78_000_80_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-78k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-78k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-78000-80000-on-may-1
+  parent_outcome_label: 78,000
+  child_outcome_label: 78,000-80,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [78000, 80000] implies the above-threshold event at 78000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_78_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-78k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-78k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 78,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 78000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_80_000_vs_80_000_82_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-80k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-80k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-80000-82000-on-may-1
+  parent_outcome_label: 80,000
+  child_outcome_label: 80,000-82,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [80000, 82000] implies the above-threshold event at 80000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_78_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-78k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-78k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 78,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 78000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_80_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-80k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-80k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 80,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 80000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_82_000_vs_82_000_84_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-82k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-82k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-82000-84000-on-may-1
+  parent_outcome_label: 82,000
+  child_outcome_label: 82,000-84,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [82000, 84000] implies the above-threshold event at 82000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_78_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-78k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-78k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 78,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 78000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_80_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-80k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-80k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 80,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 80000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_82_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-82k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-82k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 82,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 82000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_84_000_vs_84_000_86_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-84k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-84k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-84000-86000-on-may-1
+  parent_outcome_label: 84,000
+  child_outcome_label: 84,000-86,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [84000, 86000] implies the above-threshold event at 84000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_68_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-68k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-68k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 68,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 68000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_70_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-70k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-70k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 70,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 70000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_72_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-72k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-72k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 72,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 72000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_74_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-74k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-74k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 74,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 74000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_76_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-76k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-76k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 76,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 76000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_78_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-78k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-78k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 78,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 78000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_86_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-86k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-86k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 86,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: boundary_ambiguous
+  boundary_ambiguity: true
+  boundary_warning: 'Boundary ambiguity: range lower bound equals above threshold
+    and the above rule may be strict.'
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 86000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings:
+  - 'Boundary ambiguity: range lower bound equals above threshold and the above rule
+    may be strict.'
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_80_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-80k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-80k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 80,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 80000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_82_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-82k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-82k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 82,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 82000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
+- name: AUTO_BTC_84_000_vs_86_000_88_000_CHILD_IMPLIES_PARENT
+  enabled: false
+  parent_market_slug: bitcoin-above-84k-on-may-1
+  child_market_slug: will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_event_slug: bitcoin-above-on-may-1
+  child_event_slug: bitcoin-price-on-may-1
+  parent_object_type: event
+  child_object_type: event
+  parent_frontend_url: https://polymarket.com/event/bitcoin-above-on-may-1
+  child_frontend_url: https://polymarket.com/event/bitcoin-price-on-may-1
+  parent_api_url: https://gamma-api.polymarket.com/markets?slug=bitcoin-above-84k-on-may-1
+  child_api_url: https://gamma-api.polymarket.com/markets?slug=will-the-price-of-bitcoin-be-between-86000-88000-on-may-1
+  parent_outcome_label: 84,000
+  child_outcome_label: 86,000-88,000
+  relation: child_implies_parent
+  relation_subtype: range_implies_above
+  relation_safety: clean
+  boundary_ambiguity: false
+  boundary_warning: null
+  confidence: medium
+  relation_source: deterministic_rule
+  manual_rule_verification_required: true
+  reason: Range [86000, 88000] implies the above-threshold event at 84000 under the
+    same asset, resolution source, price source, candle field, and timestamp.
+  warnings: []
+  trade_template:
+    leg_1:
+      market: parent
+      outcome: 'YES'
+      side: BUY
+    leg_2:
+      market: child
+      outcome: 'NO'
+      side: BUY
+  overrides:
+    min_edge_threshold: 0.0025
+    max_trade_size_usd: 20.0
+    max_spread_per_leg: 0.1
+    fee_mode: conservative
+    order_role: taker
+    fee_buffer_usd: 0.0
+    slippage_buffer: 0.0025
